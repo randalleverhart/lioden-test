@@ -1,1 +1,583 @@
-t
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Grenze+Gotisch:wght@300;400;500;600;700;800&family=IM+Fell+English+SC&display=swap');
+
+:root {
+/* Infernal Gothic Palette */
+--color-0: #030102;
+--color-1: #090305;
+--color-2: #140608;
+--color-3: #26080d;
+--color-4: #4b0a14;
+--color-5: #8f1628;
+--color-6: #d2a89b;
+--color-7: #fff0e8;
+
+```
+--accent-1: #b82036;
+--accent-2: #5c0b16;
+--accent-3: #b08a52;
+--accent-shadow: #ff1b3d;
+
+--transparent-color-1: rgb(9 3 5 / 82%);
+--transparent-color-2: rgb(75 10 20 / 65%);
+--transparent-color-3: rgb(143 22 40 / 55%);
+--transparent-black: rgb(3 1 2 / 88%);
+--transparent-deep-red: rgb(38 8 13 / 80%);
+
+--font-1: 'Cinzel Decorative', serif;
+--font-2: 'Grenze Gotisch', serif;
+--font-3: 'IM Fell English SC', serif;
+```
+
+}
+
+/* Full Page */
+body {
+color: var(--color-6);
+background:
+radial-gradient(circle at 50% 8%, rgb(143 22 40 / 38%), transparent 32%),
+radial-gradient(circle at 15% 80%, rgb(75 10 20 / 35%), transparent 35%),
+linear-gradient(rgb(3 1 2 / 82%), rgb(3 1 2 / 94%)),
+url(https://images.pexels.com/photos/33307508/pexels-photo-33307508.jpeg) fixed center;
+background-size: cover;
+background-attachment: fixed;
+backdrop-filter: blur(1px) grayscale(0.55) contrast(1.15);
+}
+
+/* Universal Links */
+a {
+color: var(--color-6);
+transition: 0.25s ease;
+}
+
+a:hover {
+color: var(--color-7);
+text-decoration: none;
+background: transparent;
+filter: drop-shadow(0 0 6px var(--accent-shadow));
+}
+
+/* Scrollbar */
+
+* {
+  scrollbar-color: var(--color-5) var(--color-0);
+  }
+
+/* Topbar */
+.container.topbar {
+color: var(--color-6);
+background:
+linear-gradient(135deg, var(--color-0), var(--color-2), var(--color-1));
+border-radius: 18px;
+font-family: var(--font-2);
+font-size: 15px;
+font-weight: 400;
+border: 4px double var(--color-5);
+box-shadow:
+0 0 18px rgb(184 32 54 / 35%),
+inset 0 0 18px rgb(0 0 0 / 80%);
+}
+
+.container.topbar a {
+color: var(--color-6);
+font-weight: 600;
+letter-spacing: 0.5px;
+}
+
+.container.topbar a:hover {
+color: var(--color-7);
+filter: drop-shadow(0 0 7px var(--accent-shadow));
+background: transparent;
+}
+
+/* Main */
+.container.main {
+background: none;
+box-shadow: none;
+border: none;
+}
+
+/* Navbar */
+nav.navbar.navbar-default {
+background:
+linear-gradient(90deg, var(--color-0), var(--color-3), var(--color-0));
+border: 4px double var(--color-5);
+border-radius: 14px;
+box-shadow:
+0 0 18px rgb(143 22 40 / 35%),
+inset 0 0 20px rgb(0 0 0 / 80%);
+}
+
+nav.navbar.navbar-default a {
+color: var(--color-6);
+font-family: var(--font-2);
+font-size: 15px;
+letter-spacing: 0.6px;
+}
+
+nav.navbar.navbar-default a:hover {
+color: var(--color-7);
+background: transparent !important;
+filter: drop-shadow(0 0 8px var(--accent-shadow));
+}
+
+a.navbar-brand.visible-lg.visible-md img {
+filter: grayscale(0.75) brightness(55%) sepia(0.4) hue-rotate(300deg) saturate(1.8);
+}
+
+/* Page Body */
+.col-md-9 {
+background: var(--transparent-color-1);
+min-height: 800px;
+padding-top: 25px;
+font-family: var(--font-3);
+font-size: medium;
+color: var(--color-6);
+border: 2px solid rgb(143 22 40 / 45%);
+box-shadow:
+inset 0 0 35px rgb(0 0 0 / 88%),
+0 0 22px rgb(75 10 20 / 45%);
+}
+
+/* Breadcrumb */
+ol.breadcrumb {
+background:
+linear-gradient(90deg, var(--color-0), var(--color-2), var(--color-0));
+border-radius: 12px;
+border: 2px solid var(--color-4);
+box-shadow: inset 0 0 14px rgb(0 0 0 / 85%);
+}
+
+ol.breadcrumb a {
+color: var(--color-6);
+font-family: var(--font-2);
+font-size: smaller;
+}
+
+ol.breadcrumb a:hover {
+color: var(--color-7);
+filter: drop-shadow(0 0 6px var(--accent-shadow));
+}
+
+li.breadcrumb-item.active {
+color: var(--accent-3);
+font-size: medium;
+font-weight: 600;
+}
+
+/* Inputs / Buttons */
+input.floatright {
+color: var(--color-7);
+text-shadow: none;
+background: var(--color-3);
+border: 3px double var(--color-5);
+border-radius: 10px;
+font-family: var(--font-2);
+}
+
+input.floatright:hover {
+color: var(--color-7);
+text-shadow: none;
+background: var(--transparent-color-2);
+border: 2px solid var(--accent-1);
+border-radius: 10px;
+margin: 2px;
+box-shadow: 0 0 10px rgb(255 27 61 / 40%);
+}
+
+/* Alerts */
+.alert.alert-success {
+color: var(--color-7);
+background: var(--transparent-deep-red);
+border: 3px double var(--color-5);
+box-shadow: inset 0 0 16px rgb(0 0 0 / 75%);
+}
+
+/* Right and Left Arrows */
+.floatleft img,
+.floatright img {
+filter: grayscale(0.65) brightness(60%) sepia(0.5) hue-rotate(300deg) saturate(2);
+}
+
+/* Cave Owner */
+.center {
+color: var(--color-7);
+align-content: center;
+padding: 5px;
+font-family: var(--font-3);
+}
+
+.center small {
+color: var(--color-6);
+}
+
+.center a {
+color: var(--accent-3);
+}
+
+.center a:hover {
+color: var(--color-7);
+filter: drop-shadow(0 0 7px var(--accent-shadow));
+}
+
+/* Featured Lion */
+.featured-lion {
+background:
+linear-gradient(145deg, var(--color-0), var(--color-2), var(--color-0));
+border: 5px double var(--color-5);
+border-radius: 20px;
+box-shadow:
+0 0 20px rgb(143 22 40 / 38%),
+inset 0 0 25px rgb(0 0 0 / 85%);
+}
+
+.featured-lion a {
+color: var(--accent-3) !important;
+}
+
+/* Lion Background Image */
+.lion-image-block img:nth-child(1) {
+content: url(https://static.lioden.com/images/dynamic/backgrounds/palaceoasis.png);
+filter: grayscale(0.65) brightness(42%) sepia(0.45) hue-rotate(300deg) saturate(1.8) contrast(1.2);
+}
+
+/* Pride Table */
+table#pride {
+color: var(--color-6);
+border: 5px double var(--color-5);
+background: var(--transparent-color-1);
+box-shadow:
+0 0 18px rgb(75 10 20 / 45%),
+inset 0 0 22px rgb(0 0 0 / 80%);
+}
+
+table#pride th {
+background:
+linear-gradient(90deg, var(--color-0), var(--color-3), var(--color-0));
+color: var(--accent-3);
+font-family: var(--font-2);
+letter-spacing: 0.7px;
+}
+
+table#pride a {
+color: var(--color-6);
+}
+
+table#pride a:hover {
+color: var(--color-7);
+filter: drop-shadow(0 0 6px var(--accent-shadow));
+}
+
+td.left.b {
+background: var(--color-0);
+color: var(--accent-3);
+}
+
+td.right_odd {
+background: var(--transparent-color-1) !important;
+}
+
+td.bottom {
+background: var(--color-0) !important;
+}
+
+td.bottom select {
+background: var(--color-1);
+color: var(--color-6) !important;
+border: 2px solid var(--color-5);
+border-radius: 5px;
+}
+
+td.bottom button {
+background: var(--color-3);
+color: var(--color-7);
+text-shadow: none;
+font-size: smaller;
+border: 2px solid var(--color-5);
+border-radius: 8px;
+}
+
+/* Cave Statistics */
+table.table.auto {
+color: var(--color-6);
+background: var(--transparent-color-1);
+border: 3px double var(--color-5);
+}
+
+td.top {
+background:
+linear-gradient(90deg, var(--color-0), var(--color-3), var(--color-0)) !important;
+color: var(--accent-3) !important;
+font-family: var(--font-2);
+}
+
+table.table.auto th {
+color: var(--accent-3);
+background: var(--color-0);
+font-family: var(--font-2);
+}
+
+/* Sidebar */
+div#pageSidebar {
+background:
+linear-gradient(180deg, var(--color-0), var(--color-2), var(--color-0));
+border: 5px double var(--color-5);
+border-top: none;
+color: var(--color-6);
+box-shadow:
+inset 0 0 22px rgb(0 0 0 / 85%),
+0 0 18px rgb(143 22 40 / 30%);
+}
+
+.panel {
+background: var(--transparent-black) !important;
+border: 3px double var(--color-4) !important;
+box-shadow:
+inset 0 0 14px rgb(0 0 0 / 75%),
+0 0 10px rgb(75 10 20 / 35%) !important;
+}
+
+div#pageSidebar a {
+color: var(--color-6);
+}
+
+div#pageSidebar a:hover {
+color: var(--color-7);
+filter: drop-shadow(0 0 6px var(--accent-shadow));
+}
+
+div#pageSidebar h3 {
+color: var(--accent-3);
+font-family: var(--font-1);
+letter-spacing: 1px;
+text-shadow: 0 0 8px rgb(184 32 54 / 65%);
+}
+
+/* Progress Bars */
+.progress {
+background: var(--transparent-color-2);
+box-shadow: inset 0 0 10px rgb(0 0 0 / 85%);
+border: 1px solid var(--color-5);
+}
+
+.progress-bar {
+background:
+linear-gradient(90deg, var(--color-4), var(--accent-1), var(--color-4));
+box-shadow: 0 0 8px rgb(255 27 61 / 45%);
+}
+
+.progress div {
+color: var(--color-7) !important;
+text-shadow: 1px 1px 2px var(--color-0);
+}
+
+/* Forms and Buttons */
+.col-md-12.col-xs-12 input,
+input,
+select,
+textarea {
+color: var(--color-6);
+background: var(--color-1);
+border: 2px solid var(--color-5) !important;
+text-shadow: none;
+border-radius: 7px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+color: var(--color-7);
+background: var(--color-0);
+border-color: var(--accent-1) !important;
+box-shadow: 0 0 10px rgb(255 27 61 / 35%);
+outline: none;
+}
+
+a.btn.btn-default.button,
+button,
+.btn,
+.btn-default {
+color: var(--color-7) !important;
+background:
+linear-gradient(145deg, var(--color-2), var(--color-4), var(--color-1)) !important;
+border: 2px double var(--color-5) !important;
+text-shadow: none !important;
+font-family: var(--font-2);
+border-radius: 9px;
+}
+
+a.btn.btn-default.button:hover,
+button:hover,
+.btn:hover,
+.btn-default:hover {
+color: var(--color-7) !important;
+background:
+linear-gradient(145deg, var(--color-4), var(--color-5), var(--color-2)) !important;
+box-shadow: 0 0 12px rgb(255 27 61 / 45%);
+}
+
+textarea {
+background: var(--transparent-color-1);
+color: var(--color-6);
+}
+
+/* Custom Cave Blocks */
+.container-block-main {
+color: var(--color-6);
+height: 800px;
+position: relative;
+width: 100%;
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+grid-template-rows: repeat(4, 1fr);
+gap: 5px;
+font-family: var(--font-2);
+font-size: small;
+}
+
+.block-main {
+display: block;
+overflow: auto;
+padding: 7px;
+box-sizing: border-box;
+background:
+linear-gradient(145deg, rgb(3 1 2 / 88%), rgb(38 8 13 / 74%));
+border: 5px double var(--color-5);
+border-radius: 12px;
+text-align: center;
+scrollbar-color: var(--color-5) var(--color-0);
+line-height: 1.1;
+box-shadow:
+inset 0 0 24px rgb(0 0 0 / 86%),
+0 0 15px rgb(75 10 20 / 45%);
+}
+
+.block-main:hover {
+box-shadow:
+inset 0 0 24px rgb(0 0 0 / 86%),
+0 0 20px rgb(184 32 54 / 38%);
+}
+
+.block1-info {
+grid-column: 1 / 3;
+grid-row: 1 / 5;
+}
+
+.block2-info {
+grid-column: 3 / 6;
+grid-row: 1 / 3;
+}
+
+.block3-info {
+grid-column: 3 / 6;
+grid-row: 3 / 5;
+}
+
+.block-main-header font {
+color: var(--accent-3) !important;
+font-size: x-large !important;
+font-family: var(--font-1);
+letter-spacing: 1px;
+text-shadow:
+0 0 6px rgb(184 32 54 / 75%),
+2px 2px 2px var(--color-0);
+}
+
+/* Decorative Gothic Divider */
+.block-main-header::before,
+.block-main-header::after {
+content: " ⛧ ";
+color: var(--color-5);
+text-shadow: 0 0 8px var(--accent-shadow);
+}
+
+/* Lion Cards */
+.block-lion-card {
+display: block;
+width: 98%;
+height: auto;
+margin: 4px auto;
+border: 3px double var(--color-5);
+border-radius: 12px;
+padding: 6px;
+padding-top: 10px;
+background: rgb(3 1 2 / 62%);
+box-shadow: inset 0 0 14px rgb(0 0 0 / 80%);
+}
+
+.block-lion-card img {
+width: 100%;
+height: auto;
+filter: brightness(82%) contrast(1.08) saturate(0.85);
+border-radius: 8px;
+}
+
+.lion-card-name {
+font-size: larger;
+color: var(--accent-3);
+font-family: var(--font-1);
+text-shadow: 0 0 7px rgb(184 32 54 / 60%);
+}
+
+/* Tables General */
+.table,
+.table-striped,
+.table-bordered {
+color: var(--color-6);
+background: var(--transparent-color-1);
+}
+
+.table > tbody > tr > td,
+.table > tbody > tr > th,
+.table > tfoot > tr > td,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > thead > tr > th {
+border-color: rgb(143 22 40 / 42%) !important;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+background-color: rgb(38 8 13 / 55%);
+}
+
+.table-striped > tbody > tr:nth-of-type(even) {
+background-color: rgb(3 1 2 / 55%);
+}
+
+/* Dropdowns / Menus */
+.dropdown-menu {
+background: var(--color-0);
+border: 2px double var(--color-5);
+box-shadow: 0 0 15px rgb(143 22 40 / 45%);
+}
+
+.dropdown-menu > li > a {
+color: var(--color-6) !important;
+font-family: var(--font-2);
+}
+
+.dropdown-menu > li > a:hover {
+color: var(--color-7) !important;
+background: var(--color-3) !important;
+}
+
+/* Images in Main Content */
+.col-md-9 img {
+filter: brightness(88%) contrast(1.08);
+}
+
+/* Selection Color */
+::selection {
+background: var(--color-5);
+color: var(--color-7);
+}
+
+/* Credits */
+.breadcrumb::after {
+content: "Original CSS by Polaris Penumbra (#419566) | Infernal Gothic Customization";
+position: absolute;
+right: 20%;
+z-index: 100;
+color: var(--accent-3);
+font-family: var(--font-2);
+text-shadow: 0 0 6px rgb(184 32 54 / 70%);
+}
